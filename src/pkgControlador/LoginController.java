@@ -43,6 +43,7 @@ public class LoginController implements Initializable {
                 String retorno=res.getString("autentificacionUser");
                 if (retorno.equals("correcto")) {
                 //lblMessage.setText("Bienvenido : "+usuario);
+                    System.out.println("***");
                     Stage primaryStage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/pkgModelo/principal.fxml"));
                     
