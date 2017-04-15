@@ -42,9 +42,7 @@ public class LoginController implements Initializable {
             if (res.next()) {
                 String retorno=res.getString("autentificacionUser");
                 if (retorno.equals("correcto")) {
-                    
-                lblMessage.setText("Bienvenido : "+usuario);
-                
+                //lblMessage.setText("Bienvenido : "+usuario);
                     Stage primaryStage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/pkgModelo/principal.fxml"));
                     
@@ -55,7 +53,9 @@ public class LoginController implements Initializable {
                     primaryStage.show();
                                             
                 } else {
+                    
                     lblMessage.setText("username or password invalid !!!");
+                    
                 }
                 
             } else {
