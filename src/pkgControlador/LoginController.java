@@ -42,8 +42,6 @@ public class LoginController implements Initializable {
             if (res.next()) {
                 String retorno=res.getString("autentificacionUser");
                 if (retorno.equals("correcto")) {
-                    
-                    System.out.println("Hola MUndo");
  
                     Stage primaryStage = new Stage();
                     Parent root = FXMLLoader.load(getClass().getResource("/pkgModelo/principal.fxml"));
