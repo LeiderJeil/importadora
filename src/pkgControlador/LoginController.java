@@ -5,7 +5,9 @@
  */
 package pkgControlador;
 
+import java.net.InetAddress;
 import java.net.URL;
+import java.net.UnknownHostException;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -35,10 +37,11 @@ public class LoginController implements Initializable {
     private void btnIniciarAction(ActionEvent event){
         String usuario=txtUsername.getText();
         String passwd=txtPassword.getText();
+        String ip=dameIP();
         ResultSet res;
         
         try {
-            res=conector.consultar("Select autentificacionUser('"+usuario+"','"+passwd+"' );");
+            res=conector.consultar("Select autentificacionUser('"+usuario+"','"+passwd+"' ,'"+ip+"');");
             if (res.next()) {
                 String retorno=res.getString("autentificacionUser");
                 if (retorno.equals("correcto")) {
@@ -64,6 +67,18 @@ public class LoginController implements Initializable {
         } catch (Exception e) {
             System.err.println("Error : "+e);
         }
+        
+    }
+    public String dameIP(){
+        String res="";
+        try {
+                InetAddress loc=InetAddress.getLocalHost();
+                res =loc.getHostAddress();
+                System.out.println(res);
+                }
+                        catch (UnknownHostException e)
+                        {};
+               return res;
         
     }
 
