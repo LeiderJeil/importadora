@@ -47,10 +47,10 @@ public class LoginController implements Initializable {
                 if (retorno.equals("correcto")) {
  
                     Stage primaryStage = new Stage();
-                    Parent root = FXMLLoader.load(getClass().getResource("/pkgModelo/principal.fxml"));
+                    Parent root = FXMLLoader.load(getClass().getResource("/pkgModelo/registroPedido.fxml"));
                     
                     Scene scene = new Scene(root);
-                    scene.getStylesheets().add(getClass().getResource("/pkgEstilo/principal.css").toExternalForm());
+                    scene.getStylesheets().add(getClass().getResource("/pkgEstilo/registropedido.css").toExternalForm());
 	 
                     primaryStage.setScene(scene);
                     primaryStage.show();
