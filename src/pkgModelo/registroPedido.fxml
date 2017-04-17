@@ -9,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="630.0" prefWidth="465.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="pkgControlador.RegistroPedidoController">
+<AnchorPane id="AnchorPane" prefHeight="778.0" prefWidth="496.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="pkgControlador.RegistroPedidoController">
     <stylesheets>
         <URL value="@/pkgEstilo/registropedido.css" />
     </stylesheets>
@@ -18,24 +18,28 @@
       <Label layoutX="48.0" layoutY="75.0" text="Datos del cliente" />
       <Label layoutX="48.0" layoutY="125.0" text="Nombre" />
       <Label layoutX="48.0" layoutY="165.0" prefHeight="21.0" prefWidth="55.0" text="Apellido" />
-      <TextField fx:id="txtNomPedido" layoutX="139.0" layoutY="120.0" prefHeight="31.0" prefWidth="252.0" />
-      <TextField fx:id="txtApePedido" layoutX="139.0" layoutY="160.0" prefHeight="31.0" prefWidth="252.0" />
+      <TextField fx:id="txtNomcCliente" layoutX="139.0" layoutY="120.0" prefHeight="31.0" prefWidth="252.0" />
+      <TextField fx:id="txtApeCliente" layoutX="139.0" layoutY="160.0" prefHeight="31.0" prefWidth="252.0" />
       <Label layoutX="48.0" layoutY="210.0" prefHeight="21.0" prefWidth="73.0" text="Nit/Carnet" />
       <TextField fx:id="txtNitCi" layoutX="139.0" layoutY="205.0" prefHeight="31.0" prefWidth="252.0" />
-      <Separator layoutX="4.0" layoutY="269.0" prefHeight="0.0" prefWidth="458.0" />
-      <Label layoutX="48.0" layoutY="291.0" text="Datos del Pedido" />
+      <Separator layoutX="4.0" layoutY="269.0" prefHeight="3.0" prefWidth="490.0" />
+      <Label layoutX="48.0" layoutY="291.0" text="Datos del Producto" />
       <Label layoutX="50.0" layoutY="330.0" text="Nombre Producto" />
-      <Label layoutX="53.0" layoutY="441.0" text="Fecha Pedido" />
+      <Label layoutX="52.0" layoutY="547.0" text="Fecha Pedido" />
       <Label layoutX="48.0" layoutY="367.0" text="Cantidad" />
-      <Label layoutX="51.0" layoutY="404.0" text="Proveedos" />
-      <Label layoutX="51.0" layoutY="480.0" text="Fecha Llegada" />
-      <Label layoutX="53.0" layoutY="518.0" text="Costo Pedido" />
+      <Label layoutX="50.0" layoutY="510.0" text="Proveedor" />
+      <Label layoutX="50.0" layoutY="586.0" text="Fecha Llegada" />
+      <Label layoutX="52.0" layoutY="636.0" text="Costo Pedido" />
       <TextField fx:id="txtNomProducto" layoutX="186.0" layoutY="325.0" prefHeight="31.0" prefWidth="207.0" />
       <TextField fx:id="txtCantPoducto" layoutX="164.0" layoutY="362.0" prefHeight="31.0" prefWidth="228.0" />
-      <ComboBox fx:id="comboProveedor" layoutX="164.0" layoutY="399.0" prefWidth="150.0" />
-      <DatePicker fx:id="datePedido" layoutX="162.0" layoutY="436.0" />
-      <DatePicker fx:id="dateLLegada" layoutX="162.0" layoutY="475.0" />
-      <TextField fx:id="txtCstPedido" layoutX="161.0" layoutY="513.0" />
-      <Button fx:id="btnRegistroPedido" layoutX="168.0" layoutY="554.0" mnemonicParsing="false" onAction="#btnRegistroPedidoAction" prefHeight="31.0" prefWidth="143.0" text="Registrar Pedido" />
+      <ComboBox fx:id="comboProveedor" layoutX="163.0" layoutY="505.0" prefHeight="31.0" prefWidth="207.0" promptText="Seleccione proveedor" />
+      <DatePicker fx:id="datePedido" layoutX="161.0" layoutY="542.0" />
+      <DatePicker fx:id="dateLLegada" layoutX="161.0" layoutY="581.0" />
+      <TextField fx:id="txtCstPedido" layoutX="160.0" layoutY="631.0" />
+      <Button fx:id="btnRegistroPedido" layoutX="177.0" layoutY="707.0" mnemonicParsing="false" onAction="#btnRegistroPedidoAction" prefHeight="31.0" prefWidth="143.0" text="Registrar Pedido" />
+      <Label layoutX="46.0" layoutY="405.0" text="costo Producto" />
+      <TextField fx:id="txtCstProducto" layoutX="160.0" layoutY="400.0" prefHeight="31.0" prefWidth="228.0" />
+      <Separator layoutX="5.0" layoutY="444.0" prefHeight="3.0" prefWidth="490.0" />
+      <Label layoutX="46.0" layoutY="461.0" text="Datos Pedido" />
    </children>
 </AnchorPane>
